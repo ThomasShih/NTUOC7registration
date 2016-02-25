@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "首頁";
+
+}
+@using Microsoft.AspNet.Identity
+
+@if (Request.IsAuthenticated)
+{
+    <div class="jumbotron" style="text-align:center">
+        <h1>新生學習入門書院報名系統</h1>
+
+    </div>
+
+    <div class="row">
+
+        <form style="text-align:center">
+            @*<img src="~/IMG/OC7.JPG" width="400" />*@
+
+
+            <h2 style="font-family:'Adobe Fangsong Std'" class="body-hightlight">
+                @Html.ActionLink("你已經完成報名，欲修改資料請按此", "Manage", "Account")
+            </h2>
+            <hr />
+            <p style="font-size:20pt">
+                感謝您的報名<br />
+                8/19、8/26邀請你一起起飛航向臺大的黃金歲月！<br />
+
+                再次提醒您：<br />
+            </p>
+            <p class="body-highlight" style="font-size:20pt">
+                1.請不要重複報名，重複報名並不會增加報名成功的機會。<br />
+                2.填寫報名資料後，請您耐心等候我們的電話通知報名結果及確認相關報名資料。<br />
+                3.填寫報名資料後，未接獲「電話通知」前，請勿繳納活動費用。<br />
+                4.不須於報名截止前繳費。「繳費與否」不影響「報名成功與否」。<br />
+
+            </p>
+        </form>
+    </div>
+}
+else
+{
+    <div class="jumbotron" style="text-align:center">
+        <h1>新生學習入門書院報名系統</h1>
+    </div>
+
+    <div class="row">
+
+        <form style="text-align:center">
+            @*<img  src="~/IMG/OC7.JPG " width="400"/>*@
+
+            <hr />
+            <h2 style="font-family:'Adobe Fangsong Std'" class="body-highlight2">網路報名已截止。感謝您的報名。<br></h2><hr />
+            <p style="font-size:20pt">
+                8/19、8/26邀請你一起起飛航向臺大的黃金歲月！<br />
+
+                再次提醒您：
+            </p>
+            <div style="text-align:match-parent">
+                1.若您填寫報名資料但尚未接獲電話，請您耐心等候我們的電話通知（約8/14前）報名結果及確認相關報名資料。
+            </div>
+            <p class="body-highlight" style="font-size:14pt">
+                2.填寫報名資料後，未接獲「電話通知」前，請勿繳納活動費用。<br />
+                3.不須於報名截止前繳費。「繳費與否」不影響「報名成功與否」。<br />
+                4.尚未報名的同學請不要擔心，近期仍繼續有隊輔會向您聯絡，敬請稍待。
+            </p>
+            <hr />
+            <!-- <p style="font-size:larger">
+                 恭喜錄取國立臺灣大學<br />
+                 國立臺灣大學自1935年創立至今，超過十萬名學生在這裡求學<br />
+                 數十萬個學術上、社會上、國際上的夢想在世界展翅翱翔<br />
+                 現在，加入臺灣大學的你，立刻報名新生學習入門書院<br />
+                 開創你的大學的黃金歲月！
+             </p>
+             <hr />
+             <p style="font-size:20pt">懇請您閱讀以下注意事項後再開始報名：</p>-->
+
+        </form>
+        <div class="body-content2" style="font-size:14pt">
+            <div style="text-align:match-parent">
+                1.新生書院是提供給學士班學生參加的！碩士班、博士班學生請勿報名。<br />
+                2.新生書院每梯次規劃為5天4夜，建議您全程參加，擴展自己的朋友圈！<br />
+                3.新生書院部分活動以院系規劃，請您參考以下各學院排定的時間參加：<br /><br />
+                第1梯次（8/19-8/23）：<br />理、生物資源暨農、管理、電機資訊、法律及生命科學院<br />
+                第2梯次（8/26-8/30）：<br />文、社會科、醫、工及公共衛生學院與僑生、國際學位生。<br />
+                若您不了解您錄取的學系所屬學院，請點擊參考<a href="http://www.ntu.edu.tw/academics/academics.html" target="_blank">本校網頁</a>。<br /><br />
+                4.新生書院不接受換梯。若有換梯需求，請洽本校課外活動組陳小姐<br>（電話：02-3366-2063分機18）。<br /><br />
+                5.若不全程參加新生書院（如部分課程不參加、不住宿等），該期間請自行<br />負責相關安全事宜。<br /><br />
+                6.由於提供床位有限，故將依新生戶籍地址遠近及報名順序決定住宿優先權。<br /><br />
+                <p class="body-highlight">7.填寫報名資料後，請您耐心等候我們的電話通知報名結果及確認相關報名資料。<br /></p>
+            </div>
+
+        </div>
+        <form style="text-align:center">
+            <h2 style="font-family:'Adobe Fangsong Std'" class="body-hightlight">
+                @*@Html.ActionLink("我已閱讀完畢並點擊繼續填寫資訊", "Register", "Account")*@
+            </h2>
+        </form>
+
+    </div>
+}
